@@ -8,14 +8,14 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._ my-first-playbook.yml
+  - _TODO: Enter the playbook file._ install-elk.yml
 
 This document contains the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
+- Beats in Use
+- Machines Being Monitored
 - How to Use the Ansible Build
 
 
@@ -24,11 +24,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? Availability What is the advantage of a jump box?Secure access to the network (Access control)
+- _TODO: What aspect of security do load balancers protect? Availability What is the advantage of a jump box? Secure access to the network (Access control)
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system components.
-- _TODO: What does Filebeat watch for?_Changes to file system data
-- _TODO: What does Metricbeat record?_ System metrics that indicate system health
+- _TODO: What does Filebeat watch for?_ Changes to file system data
+- _TODO: What does Metricbeat record?_  System metrics that indicate system health
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -45,10 +45,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_ 24.205.76.108
+- _TODO: Add whitelisted IP addresses_  24.205.76.108
 
 Machines within the network can only be accessed by authorized users via SSH and standard http.
-- _TODO: Which machine did you allow to access your ELK VM?My home computer public (router) IP What was its IP address?_ 24.205.76.108
+- _TODO: Which machine did you allow to access your ELK VM? My home computer public (router) IP What was its IP address?_  24.205.76.108
 
 A summary of the access policies in place can be found in the table below.
 
@@ -82,7 +82,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_ 10.0.0.10 10.0.0.11
+- _TODO: List the IP addresses of the machines you are monitoring_ 10.0.0.10 and 10.0.0.11
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_ filebeat & metricbeat
