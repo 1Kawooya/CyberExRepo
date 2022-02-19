@@ -66,12 +66,12 @@ The main advantage of automating configuration with Ansible aside from the advan
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
--Install docker and ensure it is in a running state
--Install Python 3 and ensure it is in a running state
--Install the docker python module and ensure it is in a running state
--Increase the memory usage to the desired value 262144 MB
--download and lauch the docker elk container with the required published ports bidirectional 5601, 9200, 5044
--enable the docker service on boot for persistence
+- Install docker and ensure it is in a running state
+- Install Python 3 and ensure it is in a running state
+- Install the docker python module and ensure it is in a running state
+- Increase the memory usage to the desired value 262144 MB
+- download and lauch the docker elk container with the required published ports bidirectional 5601, 9200, 5044
+- enable the docker service on boot for persistence
 
 - ...
 
