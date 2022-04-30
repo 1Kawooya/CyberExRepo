@@ -8,9 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._ install-elk.yml
-
-This document contains the following details:
+  This document contains the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
@@ -64,7 +62,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The main advantage of automating configuration with Ansible aside from the advantages of containerization mentioned above is that it avoids errors, is faster, and is repeatable.
  
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - Install docker and ensure it is in a running state
 - Install Python 3 and ensure it is in a running state
@@ -81,18 +78,15 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_ 
 
 10.0.0.10 : **Web-2**
 10.0.0.11 : **Web-1**
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_ 
  - filebeat & metricbeat installed on **Web-1**
  - filebeat & metricbeat installed on **Web-2**
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Beats allow us to collect log information about a system but unlike other built-in log collectors such as auditd and syslog, beats will only collect eventful logs that are of interest thereby also simplifying the parsing process. 
 - The two types of beats we configured are filebeat and metricbeat.  Filebeat collects data about the file system such as packetbeat which monitors network traffic packet data as it traverses the network.
 - Metricbeat on the other hand collects machine metrics that provide useful information as to the machines' health. Common metrics include CPU usage and machine uptime.
@@ -108,7 +102,6 @@ SSH into the control node and follow the steps below:
   - ansible-playbook /etc/ansible/filebeat-playbook.yml
   - ansible-playbook /etc/ansible/metricbeat-playbook.yml
 
-_TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? In my case it was install-elk.yml Where do you copy it?_ root@94b332d67d37:/etc/ansible
 - _Which file do you update to make Ansible run the playbook on a specific machine? The hosts file /etc/ansible/hosts How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ Machines to install ELK server on are specified in the ELK group within the ansible hosts file while target machines for the filebeat install are specified within the filebeat-config.yml file
 - _Which URL do you navigate to in order to check that the ELK server is running? http://[my.VM.IP]:5601/app/kibana
