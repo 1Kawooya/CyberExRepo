@@ -29,7 +29,6 @@ Filebeat watches for changes to file system data including
 Metricbeat watches for system metrics that indicate system health
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -102,8 +101,8 @@ SSH into the control node and follow the steps below:
   - ansible-playbook /etc/ansible/filebeat-playbook.yml
   - ansible-playbook /etc/ansible/metricbeat-playbook.yml
 
-- _Which file is the playbook? In my case it was install-elk.yml Where do you copy it?_ root@94b332d67d37:/etc/ansible
-- _Which file do you update to make Ansible run the playbook on a specific machine? The hosts file /etc/ansible/hosts How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ Machines to install ELK server on are specified in the ELK group within the ansible hosts file while target machines for the filebeat install are specified within the filebeat-config.yml file
-- _Which URL do you navigate to in order to check that the ELK server is running? http://[my.VM.IP]:5601/app/kibana
+-  My playbook was install-elk.yml and i copied it to root@94b332d67d37:/etc/ansible
+- I updated the host file at  hosts file /etc/ansible/hosts to make Ansible run the playbook on a specific machine. Machines to install ELK server on are specified in the ELK group within the ansible hosts file while target machines for the filebeat install are specified within the filebeat-config.yml file
+- I navigate to the following URL in order to check that the ELK server is running  http://[my.VM.IP]:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._ # ansible-playbook filebeat-playbook.yml
+_The user will need to run the following specific command in order to download the playbook, update files etc:_ # ansible-playbook filebeat-playbook.yml
